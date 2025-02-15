@@ -1,7 +1,11 @@
 pipeline {
-    stage('git checkout'){
+    agent any
+    stages{
 
-       git 'https://github.com/dajari1/jenkins-pipeline-projectwork.git'
+        stage('git checkout'){
+
+
+            git 'https://github.com/dajari1/jenkins-pipeline-projectwork.git'
     }
     stage('building image'){
 
@@ -14,4 +18,6 @@ pipeline {
                 }
             }
         }
+    }
+    
     }
