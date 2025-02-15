@@ -1,0 +1,37 @@
+pipeline{
+    agent any
+    stages{
+        stage("stage environment"){
+
+            steps{
+                sh ' echo "welcome to stage environment" '
+            }
+        }
+        stage("QA environment"){
+
+            steps{
+                sh ' echo "welcome to QA environment" '
+            }
+        }
+        stage("DEV environment"){
+
+            steps{
+                sh ' echo "welcome to DEV environment" '
+            }
+        }
+        stage("Production environment"){
+
+            steps{
+                sh ' echo "welcome to Production environment" '
+            }
+        }
+        
+
+
+
+
+        
+
+    }
+
+}

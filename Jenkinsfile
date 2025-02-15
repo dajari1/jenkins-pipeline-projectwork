@@ -1,12 +1,14 @@
 pipeline {
     agent any
     stages{
-
-        stage('git checkout'){
-
-
-            git 'https://github.com/dajari1/jenkins-pipeline-projectwork.git'
-    }
+         stage("GitHub checkout") {
+            steps {
+                script {
+ 
+                    git branch: 'main', url: 'https://github.com/dajari1/jenkins-test.git' 
+                }
+            }
+        }
     stage('building image'){
 
         steps {
@@ -19,5 +21,5 @@ pipeline {
             }
         }
     }
-    
+
     }
